@@ -14,7 +14,6 @@ user = "tony";
 
 
 // Non-Premetive
-
 let user1 = {
     name : "yash",
     email : "yash@gmail.com",
