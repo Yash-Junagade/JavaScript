@@ -1,0 +1,10 @@
+body{
+    background: #000;
+    color: #fff;
+    text-align: center;
+    font-size: 24px;
+}
+
+.info, #ans{
+    font-size: 18px;
+}
