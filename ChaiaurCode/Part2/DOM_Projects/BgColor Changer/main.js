@@ -12,13 +12,14 @@ button.forEach(function (btn) {
                 body.style.background = "white";
                 break;
             case "blue":
-                body.style.background = "blue";
-                break;
+                    body.style.background = "blue";
+                    break;
             case "yellow":
-                body.style.background = "yellow";
-                break;
-        }
+                        body.style.background = "yellow";
+                        break;
+            default : 
+                    body.style.background = "black";
 
+        }
     })
 })
-
