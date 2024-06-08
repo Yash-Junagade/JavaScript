@@ -3,9 +3,24 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <input type="text" id="text-input" />
-    <button id="check-btn">Check</button>
-    <div id="result"></div>
+    <div class="container">
+      <div class="header">
+        <h1>is it a Palindrome?</h1>
+      </div>
+      <div class="main">
+        <div class="text">Enter a string to check for a palindrome.</div>
+        <input type="text" id="text-input" />
+        <button id="check-btn">Check</button>
+      </div>
+      <div id="result"></div>
+      <div class="hint">
+        <div class="hint-image"><span>💡</span></div>
+        <p class="hint-text">
+          A palindrome is a word or sentence that's spelled the same way both
+          forward and backward, ignoring punctuation, case, and spacing.
+        </p>
+      </div>
+    </div>
   </body>
   <script src="main.js"></script>
 </html>
