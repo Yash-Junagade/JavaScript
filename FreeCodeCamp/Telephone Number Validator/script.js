@@ -23,6 +23,8 @@ document.getElementById("check-btn").addEventListener("click", function() {
    } else {
        resultsDiv.textContent = `Invalid US number: ${userInput}`;
    }
+
+   document.getElementById("user-input").value = "";
 });
 
 document.getElementById("clear-btn").addEventListener("click", function() {
