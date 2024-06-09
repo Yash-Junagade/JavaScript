@@ -1,17 +1,30 @@
-const numberInput = document.getElementById("user-input");
-const checkBtn = document.getElementById("check-btn");
-const clearBtn = document.getElementById("clear-btn");
-const result = document.getElementById("results-div");
+document.getElementById("check-btn").addEventListener("click", function() {
+   const userInput = document.getElementById("user-input").value;
+   const resultsDiv = document.getElementById("results-div");
 
-checkBtn.addEventListener("click", ()=>{
-   let number  = numberInput.value;
-   if(!number){
-      alert("Please provide a phone number");
-   }else{
-      
+   const validUSNumberPatterns = [
+       /^1? ?\d{3}-\d{3}-\d{4}$/,
+       /^1? ?\(\d{3}\) \d{3}-\d{4}$/,
+       /^1? ?\(\d{3}\)\d{3}-\d{4}$/,
+       /^1? ?\d{10}$/,
+       /^1? ?\(\d{3}\)\d{7}$/,
+       /^1? ?\d{3} \d{3} \d{4}$/
+   ];
+
+   if (!userInput) {
+       alert("Please provide a phone number");
+       return;
    }
-})
 
-clearBtn.addEventListener("click", ()=>{
-   result.innerHTML = "";
-})
+   let isValid = validUSNumberPatterns.some(pattern => pattern.test(userInput));
+
+   if (isValid) {
+       resultsDiv.textContent = `Valid US number: ${userInput}`;
+   } else {
+       resultsDiv.textContent = `Invalid US number: ${userInput}`;
+   }
+});
+
+document.getElementById("clear-btn").addEventListener("click", function() {
+   document.getElementById("results-div").textContent = "";
+});
